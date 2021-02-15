@@ -2,8 +2,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class ConditionalTest {
 
 
@@ -20,7 +18,7 @@ class ConditionalTest {
     }
 
     @Test
-    @DisabledOnOs(value = {OS.WINDOWS})
+    @DisabledOnOs(value = {OS.MAC})
     public void disableOnWindow(){
         System.out.println("Executed not on WINDOWS only on MAC");
         Assertions.assertEquals(4,LinearSearch.linearSearch(numbers,key));

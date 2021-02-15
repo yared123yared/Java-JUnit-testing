@@ -11,19 +11,22 @@ class TestMethodOrder {
 
 
     @Test
-    @Order(1)
+    @Order(3)
     public void testInputsNull(){
+        System.out.println("test1");
         assertNotNull(numbers);
         assertNotNull(key);
     }
     @Test
     @Order(2)
     public  void testNumbersLength(){
+        System.out.println("test2");
         assertFalse(numbers.length < 0);
     }
     @Test
-    @Order(3)
+    @Order(1)
     public void testGetIndex(){
+        System.out.println("test3");
         assertEquals(4,LinearSearch.linearSearch(numbers,key));
     }
 }

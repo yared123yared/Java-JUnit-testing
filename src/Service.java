@@ -3,11 +3,20 @@ public class Service {
     public Service(Database database){
         this.database=database;
     }
-    public  boolean query(String query){
+
+
+    public Student addStudents(Student student){
+        return  database.addStudents(student);
+
+    }
+    public int getSize(){
+        return this.database.getDatabaseSize();
+    }
+    public boolean query(String query){
         return database.isAvailable();
     }
-    @Override
-    public String toString(){
-        return  "Using database with id: " + String.valueOf(database.getUniqueId());
-    }
+
+
+
 }
+

@@ -17,14 +17,15 @@ class DynamicTest {
 
 
     private  int[] numbers= {10,20,30,40,50,90,50};
-//    private  int key = 50;
+//    priva
+//    te  int key = 50;
 
     private List<Integer> createInputResult(){
         return Arrays.asList(10,20,30,40,50,90,50);
     }
 
     private List<Integer> createOutPutResult(){
-        return Arrays.asList(0,1,2,3,4,5,6);
+        return Arrays.asList(0,1,2,3,4,5,4);
     }
 
     @TestFactory
@@ -32,7 +33,7 @@ class DynamicTest {
         List<Integer> inputList = createInputResult();
         List<Integer> outPutList = createOutPutResult();
 
-        Collection< org.junit.jupiter.api.DynamicTest> dynamicTestCollection = new ArrayList<>();
+        Collection<org.junit.jupiter.api.DynamicTest> dynamicTestCollection = new ArrayList<>();
 
         for (int i = 0; i < inputList.size(); i++){
             int input = inputList.get(i);
